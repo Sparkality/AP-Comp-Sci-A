@@ -1,0 +1,43 @@
+public class KennelRegistration {
+
+	 
+	    String name;
+	    String breed;
+	    int age;
+	    String color;
+	 
+	    
+	    public KennelRegistration(String name, String breed, int age, String color){
+	        this.name = name;
+	        this.breed = breed;
+	        this.age = age;
+	        this.color = color;
+	    }
+	 
+	  
+	    public String getName() {
+	        return name;
+	    }
+	 
+	    public String getBreed() {
+	        return breed;
+	    }
+	
+	    public int getAge()  {
+	        return age;
+	    }
+	 
+	    public String getColor() {
+	        return color;
+	    }
+	 
+	    public String toString() {
+	        return("We now have " + this.getName() + ", a " + this.getColor() + ", " + this.getAge() + " year old "+ this.getBreed()+ " in our database.");
+	    }
+	 
+	    public static void main(String[] args) {
+	    	KennelRegistration Leo = new KennelRegistration("Leo","pug", 2, "black");
+	        System.out.println(Leo.toString());
+	    }
+	
+}
