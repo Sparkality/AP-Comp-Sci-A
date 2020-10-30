@@ -1,0 +1,110 @@
+//Fraction Class
+public class Fraction {
+
+	private static int num;
+	private static int den;
+	
+	public  Fraction() { 
+		num = 1;
+		den = 2;
+	}
+	
+	public Fraction(int num1, int den1) {
+		num = num1;
+		den = den1;
+	}
+	
+	public int getNum() {	
+		return num;
+	}
+	
+	public int getDen() {	
+		return den;
+	}
+	
+	public static void setNum (int newNum) {
+	   num = newNum;
+	}
+
+	public static void setDen (int newDen){
+	   den = newDen;
+	}
+	
+	
+	
+	public void showFraction() {
+	}
+
+	public static void addFraction(int a, int b, int c, int d) { 	
+		if (b == d) {
+			setDen(b);
+			setNum(a + c);
+		}
+			else if (b != d);
+			setDen(b * d);
+			setNum((a * d) + (c * b));
+		
+	}
+	
+	public static void subFraction(int a, int b, int c, int d) { 
+		if (b == d) {
+			setDen(b);
+			setNum(a - c);
+		}
+			else if (b != d);
+			setDen(b * d);
+			setNum((a * d) - (c * b));
+		
+	}
+	
+	public static void multFraction(int a, int b, int c, int d) { 
+			setDen(b * d);
+			setNum(a * c);
+		
+	}
+	
+	public static void divFraction(int a, int b, int c, int d) { 
+			setDen(b * c);
+			setNum(a * d);
+	}
+
+}
+
+
+//FractionTest Class- it does not work :(
+
+import java.lang.Math;
+import java.util.Scanner; 
+
+public class FractionTest {
+
+public static void main(String[] args)	{
+	
+	Scanner scan = new Scanner(System.in);{
+	
+	FractionTest math = new FractionTest();
+	
+	
+	
+	int num1 = scan.nextInt();
+	int den1 = scan.nextInt();
+	int num2 = scan.nextInt();
+	int den2 = scan.nextInt();
+	
+	Fraction frac1 = new Fraction(num1,den1);
+	Fraction frac2 = new Fraction(num2,den2);
+	
+	Fraction.addFraction(frac1.getNum(), frac1.getDen(), frac2.getNum(), frac2.getDen());
+	Fraction.subFraction(frac1.getNum(), frac1.getDen(), frac2.getNum(), frac2.getDen());
+	Fraction.multFraction(frac1.getNum(), frac1.getDen(), frac2.getNum(), frac2.getDen());
+	Fraction.divFraction(frac1.getNum(), frac1.getDen(), frac2.getNum(), frac2.getDen());
+	
+	
+	}
+	
+	System.out.println();
+ 	}
+
+}
+
+
